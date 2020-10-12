@@ -11,7 +11,15 @@ public class Maximum implements Comparable
     		max=z;
     	return max;
     }
-
+    public Float getMaximumOfFloat(Float x,Float y,Float z)
+    {
+    	Float max=x;
+    	if(y.compareTo(max)>0)
+    		max=y;
+    	if(z.compareTo(max)>0)
+    		max=z;
+    	return max;
+    }
 	@Override
 	public int compareTo(Object o) {
 		// TODO Auto-generated method stub
