@@ -1,28 +1,9 @@
 package com.findmaximum;
-import java.lang.Integer;
 public class Maximum implements Comparable
 {
-    public Integer getMaximumOfIntegers(Integer x,Integer y,Integer z)
+    public <T extends Comparable<T>> T getMaximum(T x,T y,T z)
     {
-    	Integer max=x;
-    	if(y.compareTo(max)>0)
-    		max=y;
-    	if(z.compareTo(max)>0)
-    		max=z;
-    	return max;
-    }
-    public Float getMaximumOfFloat(Float x,Float y,Float z)
-    {
-    	Float max=x;
-    	if(y.compareTo(max)>0)
-    		max=y;
-    	if(z.compareTo(max)>0)
-    		max=z;
-    	return max;
-    }
-    public String getMaximumOfString(String x,String y,String z)
-    {
-    	String max=x;
+    	T max=x;
     	if(y.compareTo(max)>0)
     		max=y;
     	if(z.compareTo(max)>0)
