@@ -12,6 +12,9 @@ public class MaximumTest
       static Float x=10.0f;
       static Float y=20.0f;
       static Float z=30.0f;
+      static String p="Apple";
+      static String q="Banana";
+      static String r="Peach";
 		@Test
 	    public void givenMaxAtFirstShouldPass()
 	    {
@@ -53,5 +56,26 @@ public class MaximumTest
 	       Maximum maximum=new Maximum();
 	       Float max=maximum.getMaximumOfFloat(z,x,y);
 	       Assert.assertEquals(z,max);
+	    }
+	    @Test
+	    public void givenMaxStringAtFirstShouldPass()
+	    {
+	       Maximum maximum=new Maximum();
+	       String max=maximum.getMaximumOfString(p,q,r);
+	       Assert.assertEquals(r,max);
+	    }
+	    @Test
+	    public void givenMaxStringAtSecondShouldPass()
+	    {
+	       Maximum maximum=new Maximum();
+	       String max=maximum.getMaximumOfString(p,r,q);
+	       Assert.assertEquals(r,max);
+	    }
+	    @Test
+	    public void givenMaxStringAtThirdShouldPass()
+	    {
+	       Maximum maximum=new Maximum();
+	       String max=maximum.getMaximumOfString(r,p,q);
+	       Assert.assertEquals(r,max);
 	    }
 }
