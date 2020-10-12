@@ -3,7 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 public class MaximumTest
 {
-	  static Integer[] intArray= {10,20,30,40,50,60};
+      static Integer[] intArray= {10,20,30,40,50,60};
       static Float[] floatArray= {1.0f,2.0f,3.0f,4.0f};
       static String[] stringArray= {"A","B","C","D","E","F"};
 		@Test
