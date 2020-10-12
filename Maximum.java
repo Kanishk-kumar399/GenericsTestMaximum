@@ -1,25 +1,27 @@
 package com.findmaximum;
+
+import java.util.Collection;
+
 public class Maximum<T extends Comparable<T>>
 {
-	T x,y,z;
+	T[] inputArray;
 	
-    public Maximum(T x, T y, T z) {
-		this.x = x;
-		this.y = y;
-		this.z = z;
+    public Maximum(T[] inputArray) {
+		this.inputArray=inputArray;
 	}
 
     public T getMaximum()
     {
-    	return Maximum.getMaximum(x,y,z);
+    	return Maximum.getMaximum(inputArray);
     }
-	public static <T extends Comparable<T>> T getMaximum(T x,T y,T z)
+	public static <T extends Comparable<T>> T getMaximum(T[] inputArray)
     {
-    	T max=x;
-    	if(y.compareTo(max)>0)
-    		max=y;
-    	if(z.compareTo(max)>0)
-    		max=z;
+		T max=inputArray[0];
+    	for(T element:inputArray)
+    	{
+    	if(element.compareTo(max)>0)
+    		max=element;
+    	}
     	return max;
     }
 	
