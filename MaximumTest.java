@@ -1,81 +1,78 @@
 package com.findmaximum;
-
-import static org.junit.Assert.*;
 import org.junit.Assert;
 import org.junit.Test;
-
 public class MaximumTest
 {
-	  static Integer a=10;
-      static Integer b=20;
-      static Integer c=30;
-      static Float x=10.0f;
-      static Float y=20.0f;
-      static Float z=30.0f;
-      static String p="Apple";
-      static String q="Banana";
-      static String r="Peach";
+	  static Integer integer1=10;
+      static Integer integer2=20;
+      static Integer integer3=30;
+      static Float float1=10.0f;
+      static Float float2=20.0f;
+      static Float float3=30.0f;
+      static String string1="Apple";
+      static String string2="Banana";
+      static String string3="Peach";
 		@Test
 	    public void givenMaxAtFirstShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Integer max=maximum.getMaximum(c,b,a);
-	       Assert.assertEquals(c,max);
+	       Maximum<Integer> maximum=new Maximum<Integer>(integer1,integer2,integer3);
+	       Integer max=maximum.getMaximum(integer3,integer2,integer1);
+	       Assert.assertEquals(integer3,max);
 	    }
 	    @Test
 	    public void givenMaxAtSecondShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Integer max=maximum.getMaximum(a,b,c);
-	       Assert.assertEquals(c,max);
+	       Maximum<Integer> maximum=new Maximum<Integer>(integer1,integer2,integer3);
+	       Integer max=maximum.getMaximum(integer1,integer2,integer3);
+	       Assert.assertEquals(integer3,max);
 	    }
 	    @Test
 	    public void givenMaxAtThirdShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Integer max=maximum.getMaximum(a,b,c);
-	       Assert.assertEquals(c,max);
+	       Maximum<Integer> maximum=new Maximum<Integer>(integer1,integer2,integer3);
+	       Integer max=maximum.getMaximum(integer1,integer2,integer3);
+	       Assert.assertEquals(integer3,max);
 	    }
 	    @Test
 	    public void givenMaxFloatAtFirstShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Float max=maximum.getMaximum(x,y,z);
-	       Assert.assertEquals(z,max);
+	       Maximum<Float> maximum=new Maximum<Float>(float1,float2,float3);
+	       Float max=maximum.getMaximum(float1,float2,float3);
+	       Assert.assertEquals(float3,max);
 	    }
 	    @Test
 	    public void givenMaxFloatAtSecondShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Float max=maximum.getMaximum(x,z,y);
-	       Assert.assertEquals(z,max);
+	       Maximum<Float> maximum=new Maximum<Float>(float1,float2,float3);
+	       Float max=maximum.getMaximum(float1,float3,float2);
+	       Assert.assertEquals(float3,max);
 	    }
 	    @Test
 	    public void givenMaxFloatAtThirdShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       Float max=maximum.getMaximum(z,x,y);
-	       Assert.assertEquals(z,max);
+	       Maximum<Float> maximum=new Maximum<Float>(float1,float2,float3);
+	       Float max=maximum.getMaximum(float3,float1,float2);
+	       Assert.assertEquals(float3,max);
 	    }
 	    @Test
 	    public void givenMaxStringAtFirstShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       String max=maximum.getMaximum(p,q,r);
-	       Assert.assertEquals(r,max);
+	       Maximum<String> maximum=new Maximum<String>(string1,string2,string3);
+	       String max=maximum.getMaximum(string1,string2,string3);
+	       Assert.assertEquals(string3,max);
 	    }
 	    @Test
 	    public void givenMaxStringAtSecondShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       String max=maximum.getMaximum(p,r,q);
-	       Assert.assertEquals(r,max);
+	       Maximum<String> maximum=new Maximum<String>(string1,string2,string3);
+	       String max=maximum.getMaximum(string1,string3,string2);
+	       Assert.assertEquals(string3,max);
 	    }
 	    @Test
 	    public void givenMaxStringAtThirdShouldPass()
 	    {
-	       Maximum maximum=new Maximum();
-	       String max=maximum.getMaximum(r,p,q);
-	       Assert.assertEquals(r,max);
+	       Maximum<String> maximum=new Maximum<String>(string1,string2,string3);
+	       String max=maximum.getMaximum(string3,string1,string2);
+	       Assert.assertEquals(string3,max);
 	    }
 }

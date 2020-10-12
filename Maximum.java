@@ -1,7 +1,19 @@
 package com.findmaximum;
-public class Maximum implements Comparable
+public class Maximum<T extends Comparable<T>>
 {
-    public <T extends Comparable<T>> T getMaximum(T x,T y,T z)
+	T x,y,z;
+	
+    public Maximum(T x, T y, T z) {
+		this.x = x;
+		this.y = y;
+		this.z = z;
+	}
+
+    public T getMaximum()
+    {
+    	return Maximum.getMaximum(x,y,z);
+    }
+	public static <T extends Comparable<T>> T getMaximum(T x,T y,T z)
     {
     	T max=x;
     	if(y.compareTo(max)>0)
@@ -10,9 +22,5 @@ public class Maximum implements Comparable
     		max=z;
     	return max;
     }
-	@Override
-	public int compareTo(Object o) {
-		// TODO Auto-generated method stub
-		return 0;
-	}
+	
 }
